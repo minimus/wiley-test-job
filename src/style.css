@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-form__input {
+  width: 100%;
+}
