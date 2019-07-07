@@ -4,7 +4,10 @@ import { TODO_LIST_ITEM_ADD, TODO_LIST_ITEM_CLEAR } from '../reducer/actions'
 
 const InputFormButtons = () => {
   // const [state, dispatch] = useReducer(reducer, initialState)
-  const { title, task } = useSelector(state => state)
+  const title = useSelector(state => state.title)
+  const task = useSelector(state => state.task)
+  const editedItem = useSelector(state => state.editedItem)
+
   const dispatch = useDispatch()
   const disabled = !title || !task
 
@@ -13,12 +16,12 @@ const InputFormButtons = () => {
       <input
         className="btn btn-success input-form__buttons-holder__button"
         type="button"
-        value="Add"
+        value={(editedItem === -1) ? 'Add' : 'Save'}
         disabled={disabled}
         onClick={() => dispatch({
           type: TODO_LIST_ITEM_ADD,
           payload: {
-            id: -1,
+            idx: editedItem,
             title,
             task,
             completed: false,

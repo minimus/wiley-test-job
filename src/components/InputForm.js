@@ -34,6 +34,7 @@ const InputForm = () => {
           <textarea
             className="input-form__job input-form__input form-control"
             value={task}
+            rows={5}
             placeholder="Add todo task here..."
             onChange={event => dispatch({
               type: TODO_LIST_ITEM_TASK_CHANGED,
