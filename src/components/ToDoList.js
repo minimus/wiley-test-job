@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ToDoListItem from './ToDoListItem'
-// import { TODO_LIST_ITEM_COMPLETE } from '../reducer/actions'
 
 const ToDoList = () => {
   const list = useSelector(state => state.list || [])
