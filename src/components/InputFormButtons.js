@@ -31,7 +31,7 @@ const InputFormButtons = () => {
       <input
         className="btn btn-danger input-form__buttons-holder__button"
         type="button"
-        value="Clear"
+        value={(editedItem === -1) ? 'Clear' : 'Cancel'}
         disabled={disabled}
         onClick={() => dispatch({
           type: TODO_LIST_ITEM_CLEAR,
